@@ -1,10 +1,3 @@
-Sure, bhai! Here's a **professional, detailed, and recruiter-friendly** `README.md` for your Promptius travel booking assignment — using React, Tailwind, and everything they asked for.
-
----
-
-### ✅ You can copy-paste this into your GitHub repo:
-
-```markdown
 # 🌍 Trip Booking Platform — Promptius Assignment
 
 A responsive and interactive travel booking frontend built using **React.js**, **Tailwind CSS**, and **Framer Motion** as part of a full stack internship assignment for Promptius AI.
@@ -39,23 +32,19 @@ This project simulates a real-world travel agency platform where users can brows
 
 ## 📁 Folder Structure
 
-```
-
 trip-booking-app/
 ├── public/
-│   └── trips.json
+│ └── trips.json
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── context/
-│   ├── data/
-│   ├── styles/
-│   ├── App.jsx
-│   └── main.jsx
+│ ├── assets/
+│ ├── components/
+│ ├── pages/
+│ ├── context/
+│ ├── data/
+│ ├── styles/
+│ ├── App.jsx
+│ └── main.jsx
 └── README.md
-
-````
 
 ---
 
@@ -90,60 +79,24 @@ npm install
 
 # Start dev server
 npm run dev
-````
+
+The trip data is stored as static JSON and fetched on-demand to simulate real APIs.
+
+State is managed using React's built-in hooks, while filtering and rendering use Array methods.
+
+I used Framer Motion to elevate the experience with micro-interactions and smooth page transitions.
+
+## Future Improvements
+- Add step-by-step checkout form
+- Integrate real payment gateway for full e-commerce simulation
+- Add user authentication using Firebase/Auth0
+
+
+## Author
+Sahil Salunke
+🔗 [Portfolio](https://your-portfolio-link.com)
+🔗 [GitHub](https://github.com/yourusername)
+🔗 [LinkedIn](https://www.linkedin.com/in/yourusername)
+📧 sahilsalunke42@gmail.com
 
 ---
-
-## 🧠 Approach
-
-* I started by designing a **clean and minimal UI**, prioritizing responsive layout and user-friendly navigation.
-* The **trip data** is stored as static JSON and fetched on-demand to simulate real APIs.
-* **State is managed** using React's built-in hooks, while **filtering and rendering** use Array methods.
-* I used **Framer Motion** to elevate the experience with micro-interactions and smooth page transitions.
-
----
-
-## 🧪 Future Improvements
-
-* Add step-by-step checkout form
-* Integrate real payment gateway for full e-commerce simulation
-* Add user authentication using Firebase/Auth0
-
----
-
-## 🧑‍💻 Author
-
-**Sahil Salunke**
-🔗 [Portfolio](https://www.salunkesahil.me)
-🔗 [GitHub](https://github.com/sahilsalunke42)
-🔗 [LinkedIn](https://www.linkedin.com/in/sahil-salunke-163284290/)
-📧 [sahilsalunke42@gmail.com](mailto:sahilsalunke42@gmail.com)
-
----
-
-## 💼 Submitted To
-
-Promptius AI — Full Stack Development Internship Assignment
-Deadline: **26 July 2025**
-
----
-
-```
-
----
-
-## ⚡ What You Should Do Next:
-
-1. Replace:
-   - `https://your-deployed-link.vercel.app` with your **actual deployed site**
-   - Screenshot paths or remove the table if not needed
-
-2. Paste this as your `README.md` file in the root of your project.
-
-3. Let me know if you want me to:
-   - Generate this as a file for download
-   - Help with screenshot design for the README
-   - Create a repo structure or push it to GitHub with you
-
-Let’s make this your **best assignment submission yet** 💪
-```
