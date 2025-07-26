@@ -38,7 +38,7 @@ const SearchBar = () => {
                 }),
                 control: (provided, state) => ({
                     ...provided,
-                    backgroundColor: 'transparent', // Change this to your desired color
+                    backgroundColor: 'transparent',
                     borderColor: state.isFocused ? '#3182ce' : '#cbd5e1',
                     boxShadow: state.isFocused ? '0 0 0 1px #3182ce' : provided.boxShadow,
                 }),

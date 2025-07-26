@@ -4,7 +4,6 @@ import home from '../assets/heroBackground.jpg';
 import AboutSection from './About';
 import SearchBar from '../components/SearchBar';
 import ExplorePage from './ExplorePage';
-import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -12,7 +11,7 @@ const Home = () => {
     return (
         <div className="relative">
             <motion.div
-                className="hero-section sm:min-h-[100vh] md:min-h-[90vh] max-h-screen bg-center flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-12 text-center"
+                className="hero-section h-[85vh] sm:h-[85vh] md:min-h-[90vh] max-h-screen bg-center flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-12 text-center"
                 style={{
                     backgroundImage: `url(${home})`,
                     backgroundSize: 'cover',
@@ -30,7 +29,7 @@ const Home = () => {
                 >
                     <Navbar />
                 </motion.div>
-                <div className="absolute top-19 w-full mx-auto px-4 mb-4">
+                <div className="absolute top-19 w-screen mx-auto px-4 mb-4">
                     <SearchBar />
                 </div>
 

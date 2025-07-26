@@ -1,22 +1,40 @@
-// Footer Component for ExploreGo
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-l from-green-300 to-green-200 py-6 sm:min-h-[300px] md:min-h-[250px] border-t border-zinc-300 flex flex-col items-center justify-center text-slate-800">
-      <div className="container mx-auto text-center mt-4">
-        <ul className="flex justify-center space-x-4">
+    <footer className="bg-white border-t border-gray-200 py-10">
+      <div className="container mx-auto px-6 max-w-7xl text-center">
+        <ul className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-6 text-gray-600">
           <li>
-            <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
+            <Link
+              to="/privacy"
+              className="hover:underline hover:text-red-600 transition-colors duration-200"
+            >
+              Privacy Policy
+            </Link>
           </li>
           <li>
-            <Link to="/terms" className="hover:underline">Terms of Service</Link>
+            <Link
+              to="/terms"
+              className="hover:underline hover:text-red-600 transition-colors duration-200"
+            >
+              Terms of Service
+            </Link>
           </li>
           <li>
-            <Link to="/contact" className="hover:underline">Contact Us</Link>
+            <Link
+              to="/contact"
+              className="hover:underline hover:text-red-600 transition-colors duration-200"
+            >
+              Contact Us
+            </Link>
           </li>
         </ul>
-        <p className="flex items-center justify-center py-6 text-sm mb-4">© 2023 ExploreGo. All rights reserved.</p>
+
+        <p className="text-sm text-gray-500 select-none">
+          © 2023 ExploreGo. All rights reserved.
+        </p>
       </div>
     </footer>
   );
