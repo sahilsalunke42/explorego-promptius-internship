@@ -7,7 +7,7 @@ const ExplorePage = () => {
     <div
       id="explore"
       className="
-        min-h-[60vh] 
+        min-h-[80vh] 
         sm:min-h-[80vh] 
         md:min-h-[85vh] 
         lg:min-h-[80vh] 
