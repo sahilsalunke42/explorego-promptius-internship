@@ -19,7 +19,7 @@ const AboutSection = () => {
       </div>
 
 
-      <div className="max-w-2xl mx-auto text-center relative z-10 p-8 ">
+      <div className="max-w-2xl mx-auto text-center relative p-8 ">
         <motion.h2
           className="text-3xl sm:text-4xl font-bold text-green-900 mb-4"
           initial={{ opacity: 0, y: 20 }}

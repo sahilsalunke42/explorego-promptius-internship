@@ -5,10 +5,10 @@ import menuImage from "../assets/menuBar.jpg";
 
 const MobileMenu = () => {
   const navLinks = [
-    { name: "Home", to: "#home" },
-    { name: "About", to: "#about" },
-    { name: "Explore", to: "#explore" },
-    { name: "Login/Signup", to: "#signup" },
+    { name: "Home", to: "/" },
+    { name: "About", anchor: "#about" },
+    { name: "Explore", anchor: "#explore" },
+    { name: "Login/Signup", to: "/signup" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -38,16 +38,26 @@ const MobileMenu = () => {
 
           <div className="p-6 flex-1 overflow-y-auto">
             <ul className="space-y-7 text-center text-zinc-800 ">
-              {navLinks.map((link) => (
-                <li key={link.to}>
+              {navLinks.map((link, index) => (
+                <li key={link.to || link.anchor || index}>
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <Link
-                      to={link.to}
-                      className="block text-md hover:text-lg transition-all duration-200 font-medium hover:text-teal-500"
-                      onClick={toggleMenu}
-                    >
-                      {link.name}
-                    </Link>
+                    {link.to ? (
+                      <Link
+                        to={link.to}
+                        className="block text-md hover:text-lg transition-all duration-200 font-medium hover:text-teal-500"
+                        onClick={toggleMenu}
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.anchor}
+                        className="block text-md hover:text-lg transition-all duration-200 font-medium hover:text-teal-500"
+                        onClick={toggleMenu}
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </div>
                 </li>
               ))}

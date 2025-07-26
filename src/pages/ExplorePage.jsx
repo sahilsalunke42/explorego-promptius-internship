@@ -1,22 +1,26 @@
-// Explore page containing a carousel of places
+import React from 'react';
 import Carousel from '../components/Carousel';
 import { motion } from 'framer-motion';
 
 const ExplorePage = () => {
     return (
-        <div id='explore' className=" min-h-screen sm:h-[80vh] flex flex-col bg-gradient-to-r from-green-100 to-green-200 items-center justify-center">
-      <div id='explore' className="min-h-screen sm:h-[80vh] flex flex-col bg-gradient-to-r from-green-100 to-green-200 items-center justify-center relative">
-          <motion.div
-              className="container mx-auto px-4 py-8"
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-          >
-              <h1 className="py-8 text-3xl font-semibold text-center">Explore Amazing Places!</h1>
-              <Carousel />
-          </motion.div>
-      </div>
-    </div>
+        <div
+            id="explore"
+            className="min-h-screen sm:h-[80vh] flex items-center justify-center bg-gradient-to-r from-green-100 to-green-200"
+        >
+            <motion.div
+                className="flex flex-col justify-center items-center w-full h-full"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
+                <section className="flex items-center justify-center text-3xl font-semibold text-center mb-10 text-green-900">
+                    Explore Amazing Places!
+                </section>
+                <Carousel />
+            </motion.div>
+        </div>
     );
-}
+};
+
 export default ExplorePage;

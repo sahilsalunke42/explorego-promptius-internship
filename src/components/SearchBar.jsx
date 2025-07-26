@@ -1,43 +1,37 @@
-// searchbar component for the ExploreGo application
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+import { mockTrips } from '../utils/trips';
+
+const animatedComponents = makeAnimated();
 
 const SearchBar = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const navigate = useNavigate();
+    const [selectedTrips, setSelectedTrips] = useState([]);
     
-    const handleSearch = (e) => {
-        e.preventDefault();
-        if (searchTerm.trim()) {
-        navigate(`/explore?query=${encodeURIComponent(searchTerm)}`);
-        }
+    // Transform mockTrips into format required by react-select
+    const tripOptions = mockTrips.map(trip => ({
+        value: trip.id,
+        label: trip.destination,
+        trip: trip // Keep original trip data
+    }));
+
+    const handleChange = (selectedOptions) => {
+        setSelectedTrips(selectedOptions);
+        console.log("Selected trips:", selectedOptions);
     };
-    
+
     return (
-        <motion.div
-        className="flex items-center justify-center mt-2"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        >
-        <form onSubmit={handleSearch} className="flex w-full gap-1">
-            <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search for destinations..."
-            className="w-full p-3 border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zinc-700"
-            />
-            <button
-            type="submit"
-            className=" bg-teal-500 text-white p-3 rounded-lg hover:bg-teal-600 transition-colors duration-300 border border-white hover:text-lg "
-            >
-            Search
-            </button>
-        </form>
-        </motion.div>
+        <Select
+            closeMenuOnSelect={false}
+            components={animatedComponents}
+            defaultValue={[tripOptions[0], tripOptions[1]]}
+            isMulti
+            options={tripOptions}
+            onChange={handleChange}
+            placeholder="Search destinations..."
+            className='w-screen max-w-full mx-auto my-4 rounded-lg bg-transparent'
+        />
     );
-};
+}
 
 export default SearchBar;

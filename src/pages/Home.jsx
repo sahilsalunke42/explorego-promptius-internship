@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div className="relative">
             <motion.div
-                className="hero-section min-h-[80vh] sm:min-h-[100vh] md:min-h-[80vh] max-h-screen bg-center flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-12 text-center"
+                className="hero-section sm:min-h-[100vh] md:min-h-[90vh] max-h-screen bg-center flex flex-col items-center justify-center text-white px-4 sm:px-6 md:px-12 text-center"
                 style={{
                     backgroundImage: `url(${home})`,
                     backgroundSize: 'cover',
@@ -30,7 +30,7 @@ const Home = () => {
                 >
                     <Navbar />
                 </motion.div>
-                <div className="absolute top-19 w-full mx-auto px-4 mb-4 z-20">
+                <div className="absolute top-19 w-full mx-auto px-4 mb-4">
                     <SearchBar />
                 </div>
 
@@ -38,7 +38,7 @@ const Home = () => {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, ease: 'easeInOut', delay: 0.3 }}
-                    className="z-20 mt-28 sm:mt-32 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
+                    className="mt-28 sm:mt-32 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
                 >
                     Welcome to ExploreGo
                 </motion.h1>
@@ -47,14 +47,14 @@ const Home = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, ease: 'easeInOut', delay: 0.5 }}
-                    className="z-20 mt-4 text-base sm:text-lg md:text-xl max-w-2xl"
+                    className="mt-4 text-base sm:text-lg md:text-xl max-w-2xl"
                 >
                     Discover the world with us and explore new horizons. <br className="hidden sm:inline" />
                     Let your journey begin!
                 </motion.p>
 
                 <motion.div
-                    className="z-20 mt-8"
+                    className="mt-8"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.2, ease: 'easeInOut', delay: 0.7 }}

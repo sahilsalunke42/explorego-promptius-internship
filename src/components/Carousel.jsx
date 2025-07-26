@@ -1,26 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import bali from '../assets/bali.jpg';
-import newyork from '../assets/newyork.jpg';
-import tokyo from '../assets/tokyo.jpg';
-import sydney from '../assets/sydney.jpg';
-import london from '../assets/london.jpg';
-import paris from '../assets/paris.jpg';
-import dubai from '../assets/dubai.jpg';
-import rome from '../assets/rome.jpg';
+import { mockTrips } from "../utils/trips";
 
-const places = [
-  { id: 1, name: "Bali", image: bali },
-  { id: 2, name: "New York", image: newyork },
-  { id: 3, name: "Tokyo", image: tokyo },
-  { id: 4, name: "Sydney", image: sydney },
-  { id: 5, name: "London", image: london },
-  { id: 6, name: "Paris", image: paris },
-  { id: 7, name: "Dubai", image: dubai },
-  { id: 8, name: "Rome", image: rome },
-];
+const places = mockTrips.map((trip) => ({
+  id: trip.id,
+  name: trip.destination,
+  image: trip.image,
+}));
+
 
 const settings = {
   dots: true,
@@ -40,7 +29,7 @@ const settings = {
         slidesToScroll: 1,
         infinite: true,
         dots: true,
-      }
+      },
     },
     {
       breakpoint: 640,
@@ -48,56 +37,40 @@ const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 
 const Carousel = () => (
-  <div className="min-h-screen bg-gradient-to-r from-green-100 to-green-200 flex items-center justify-center px-2 py-10">
-    <Slider {...settings} className="w-full max-w-4xl">
-      {places.map((place) => (
-        <div key={place.id} className="flex justify-center py-4 px-3">
-          <div
-            className="
-              border border-green-200
-              rounded-2xl
-              shadow-lg
-              bg-white
-              flex flex-col items-center
-              w-70
-              max-w-xs
-              sm:max-w-sm
-              md:max-w-md
-              lg:max-w-lg
-              transition
-              duration-300
-              transform
-              hover:scale-105
-              hover:shadow-2xl
-              mx-auto
-            "
-          >
-            <img
-              src={place.image}
-              alt={place.name}
-              className="w-full h-52 sm:h-64 object-cover rounded-t-2xl select-none"
-              draggable={false}
-            />
-            <div className="flex-1 flex flex-col justify-between p-4 w-full">
-              <h3 className="text-center text-xl font-bold text-green-800 mb-2 truncate">{place.name}</h3>
-              <Link
-                to={`/trip/${place.id}`}
-                className="inline-block w-full mt-3 px-0 py-2 bg-green-600 text-white rounded-lg font-semibold text-base hover:bg-green-700 transition text-center shadow"
-              >
-                View Details
-              </Link>
-            </div>
+  <Slider {...settings} className="w-full max-w-4xl">
+    {places.map((place) => (
+      <div key={place.id} className="flex justify-center p-4">
+        <div
+          className="
+              border border-green-200 rounded-2xl shadow-lg bg-white flex flex-col items-center w-70 max-w-md sm:max-w-sm md:max-w-lg transition duration-300 transform hover:scale-105 hover:shadow-2xl mx-auto"
+        >
+          <img
+            src={place.image}
+            alt={place.name}
+            className="w-full h-52 sm:h-64 object-cover rounded-t-2xl select-none"
+            draggable={false}
+          />
+          <div className="flex-1 flex flex-col justify-between p-4 w-full">
+            <h3 className="text-center text-xl font-bold text-green-800 mb-2 truncate">
+              {place.name}
+            </h3>
+            <Link
+              to={`/trip/${place.id}`}
+              className="inline-block w-full mt-3 px-0 py-2 bg-green-600 text-white rounded-lg font-semibold text-base hover:bg-green-700 transition text-center shadow"
+            >
+              View Details
+            </Link>
           </div>
         </div>
-      ))}
-    </Slider>
-  </div>
+      </div>
+    ))}
+  </Slider>
 );
 
 export default Carousel;
