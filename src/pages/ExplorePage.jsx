@@ -8,7 +8,7 @@ const ExplorePage = () => {
       id="explore"
       className="
         min-h-[60vh] 
-        sm:min-h-[70vh] 
+        sm:min-h-[80vh] 
         md:min-h-[85vh] 
         lg:min-h-[80vh] 
         xl:min-h-[85vh] 
