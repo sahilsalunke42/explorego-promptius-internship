@@ -35,15 +35,35 @@ ExploreGo helps users search, explore, and view detailed trip information with c
 
 ```
 📦 explorego/
-├── public/
-│   └── trips.json             # Static trip data
+├── public/                    #svg images
 ├── src/
-│   ├── assets/                # Images and icons
-│   ├── components/            # Navbar, TripCard, Carousel, etc.
-│   ├── pages/                 # Home, Explore, SearchResult, etc.
-│   ├── styles/                # Tailwind index.css
-│   ├── App.jsx                # Routes and layout
-│   └── main.jsx               # App entry point
+│   ├── assets/                # Images, icons, backgrounds
+│   ├── components/            # Reusable UI elements
+│   │   ├── Carousel.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Loader.jsx
+│   │   ├── MobileMenu.jsx
+│   │   ├── Navbar.jsx
+│   │   └── SearchBar.jsx
+│   ├── context/               # Global context (if any)
+│   ├── hooks/                 # Custom React hooks (if used)
+│   ├── pages/                 # Route-based components
+│   │   ├── auth/              # Login and Signup forms
+│   │   ├── About.jsx
+│   │   ├── Home.jsx
+│   │   └── TripDetails.jsx
+│   ├── utils/                 # Utility functions and dummy data
+│   │   └── trips.js
+│   ├── App.jsx                # Route config and layout
+│   ├── index.css              # Tailwind and global styles
+│   └── main.jsx               # React entry point
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+└── README.md
+
 ```
 
 ---
@@ -66,7 +86,7 @@ Authentication and protected routes were intentionally left out of this version 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/explorego.git
+   git clone https://github.com/sahilsalunke42/explorego-promptius-internship.git
    cd explorego
    ```
 
