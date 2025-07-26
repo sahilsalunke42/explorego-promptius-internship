@@ -1,102 +1,97 @@
-# 🌍 Trip Booking Platform — Promptius Assignment
+# 🌍 ExploreGo – Promptius Internship Assignment
 
-A responsive and interactive travel booking frontend built using **React.js**, **Tailwind CSS**, and **Framer Motion** as part of a full stack internship assignment for Promptius AI.
+A modern, responsive travel booking interface built with **React.js**, designed as part of the Full Stack Internship assignment for **Promptius AI**.
 
-This project simulates a real-world travel agency platform where users can browse, filter, and view details about different trip packages.
+ExploreGo helps users search, explore, and view detailed trip information with clean UI, smooth animations, and mobile-first responsiveness.
 
----
-
-## 🚀 Live Demo
-[Click to Visit](https://your-deployed-link.vercel.app)  
-*(Replace this link with your actual deployed site)*
+🔗 [Live Demo](https://explorego-promptius-internship.vercel.app/)
 
 ---
 
-## 📸 Screenshots
+## 🚀 Tech Stack
 
-| Home Page | Search Results | Trip Details |
-|-----------|----------------|--------------|
-| ![Home](./screenshots/home.png) | ![Search](./screenshots/search.png) | ![Details](./screenshots/details.png) |
-
----
-
-## 🛠️ Tech Stack
-
-- ⚛️ React.js (Vite)
-- 💨 Tailwind CSS
-- 🎞️ Framer Motion (page transitions + animations)
-- 🧠 React Context (mock auth handling)
-- 🗂️ Static JSON data for trip packages
+- **React.js** – Component-based frontend
+- **Tailwind CSS** – Utility-first modern styling
+- **Framer Motion** – Page transitions and animations
+- **React Slick** – Destination carousel
+- **React Spinners** – Custom loader component
+- **React Toastify** – Toast notifications for forms
 
 ---
 
-## 📁 Folder Structure
+## 📸 Features Overview
 
-trip-booking-app/
+- ✅ **Home Page**: Navbar, animated hero section, and a search bar  
+- ✅ **About Section**: Explains platform purpose and benefits  
+- ✅ **Explore Page**: Carousel of destinations with dynamic images  
+- ✅ **Search Results Page**: Detailed view of selected destination with pricing, itinerary, and rating  
+- ✅ **Login & Signup Pages**: Form validation and notifications using Toastify  
+- ✅ **Loader Component**: Displayed during async actions using `react-spinners`  
+- ✅ **Fully Responsive**: Works seamlessly on mobile, tablet, and desktop  
+
+---
+
+## 📂 Folder Structure Highlights
+
+```
+📦 explorego/
 ├── public/
-│ └── trips.json
+│   └── trips.json             # Static trip data
 ├── src/
-│ ├── assets/
-│ ├── components/
-│ ├── pages/
-│ ├── context/
-│ ├── data/
-│ ├── styles/
-│ ├── App.jsx
-│ └── main.jsx
-└── README.md
+│   ├── assets/                # Images and icons
+│   ├── components/            # Navbar, TripCard, Carousel, etc.
+│   ├── pages/                 # Home, Explore, SearchResult, etc.
+│   ├── styles/                # Tailwind index.css
+│   ├── App.jsx                # Routes and layout
+│   └── main.jsx               # App entry point
+```
 
 ---
 
-## ✅ Features Implemented
+## 🧠 My Approach
 
-### 🔹 Pages (3 of 5)
-- **Home Page**: Hero section with search bar + image carousel
-- **Search Results Page**: Trip listings with filter options (price, duration, location)
-- **Trip Details Page**: Detailed view with image slider, itinerary, and price breakdown
+This project was approached with the intent to simulate a real-world frontend application using best practices in modular React development. The focus areas were:
 
-### 🔹 UI/UX
-- Fully **responsive** design (desktop, tablet, mobile)
-- Smooth **animations** using Framer Motion
-- Tailwind utility-first styling for performance
+- Clean, readable, and reusable component structure  
+- State-driven interactions and animations  
+- User-centric UI/UX with consistent responsiveness  
+- Minimalistic and modern design using Tailwind's utility classes  
+- 3+ fully implemented pages as required: Home, Explore, and Search Results  
 
-### 🔹 Functionality
-- Live **filtering** (client-side) of trips by price, duration, location
-- JSON-based **dynamic data rendering**
-- **Mock authentication** using React Context + localStorage
+Authentication and protected routes were intentionally left out of this version to focus on core UI functionality. They can be easily added in future iterations.
 
 ---
 
-## 📦 How to Run Locally
+## 🛠️ Steps to Run the Application Locally
 
-```bash
-# Clone this repo
-git clone https://github.com/yourusername/trip-booking-app
-cd trip-booking-app
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/explorego.git
+   cd explorego
+   ```
 
-# Install dependencies
-npm install
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Start dev server
-npm run dev
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-The trip data is stored as static JSON and fetched on-demand to simulate real APIs.
-
-State is managed using React's built-in hooks, while filtering and rendering use Array methods.
-
-I used Framer Motion to elevate the experience with micro-interactions and smooth page transitions.
-
-## Future Improvements
-- Add step-by-step checkout form
-- Integrate real payment gateway for full e-commerce simulation
-- Add user authentication using Firebase/Auth0
-
-
-## Author
-Sahil Salunke
-🔗 [Portfolio](https://your-portfolio-link.com)
-🔗 [GitHub](https://github.com/yourusername)
-🔗 [LinkedIn](https://www.linkedin.com/in/yourusername)
-📧 sahilsalunke42@gmail.com
+4. Open in browser:  
+   [http://localhost:5173](http://localhost:5173)
 
 ---
+
+## 📝 Future Improvements
+
+- Add authentication and protected routes  
+- Integrate real API for dynamic data  
+- Improve accessibility (ARIA roles, alt tags, etc.)  
+- Add dark mode support  
+
+---
+
+🔗 [Live Site](https://explorego-promptius-internship.vercel.app/)
