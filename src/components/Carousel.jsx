@@ -53,7 +53,7 @@ const Carousel = () => {
     <Slider {...settings} className="w-full max-w-4xl">
       {places.map((place) => (
         <div key={place.id} className="flex justify-center p-4">
-          <div className="border border-green-200 rounded-2xl shadow-lg bg-white flex flex-col items-center w-70 max-w-md sm:max-w-sm md:max-w-lg transition duration-300 transform hover:scale-105 hover:shadow-2xl mx-auto">
+          <div className="border rounded-2xl shadow-lg bg-white flex flex-col items-center w-70 max-w-md sm:max-w-sm md:max-w-lg transition duration-300 transform hover:scale-105 hover:shadow-2xl mx-auto gap-0">
             <img
               src={place.image}
               alt={place.name}
@@ -61,12 +61,12 @@ const Carousel = () => {
               draggable={false}
             />
             <div className="flex-1 flex flex-col justify-between p-4 w-full">
-              <h3 className="text-center text-xl font-bold text-green-800 mb-2 truncate">
+              <h3 className="text-center text-xl font-bold text-zinc-800 mb-2 truncate">
                 {place.name}
               </h3>
               <button
                 onClick={() => handleTripClick(place.id)}
-                className="inline-block w-full mt-3 px-0 py-2 bg-green-600 text-white rounded-lg font-semibold text-base hover:bg-green-700 transition text-center shadow"
+                className="inline-block w-full mt-3 px-0 py-2 bg-red-600 text-white rounded-lg font-semibold text-base hover:bg-red-700 transition text-center shadow"
               >
                 View Details
               </button>

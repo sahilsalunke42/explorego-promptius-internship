@@ -5,6 +5,7 @@ import { fetchTripDetails } from '../hooks/fetchTripDetails';
 import Loader from '../components/Loader';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SearchBar from '../components/SearchBar';
 
 const TripDetails = () => {
     const { tripId } = useParams();
@@ -37,7 +38,13 @@ const TripDetails = () => {
 
     return (
         <div className="flex flex-col min-h-screen bg-white">
-            <Navbar />
+                <motion.div className='border border-b-zinc-400 z-50'>
+                    <Navbar />
+                </motion.div>
+                <motion.div className='flex px-5 sticky justify-center items-center w-full mb-8'>
+                    <SearchBar />
+                </motion.div>
+    
 
             <main className="flex-1 flex justify-center items-start mt-12 max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8 mb-20">
                 <motion.div

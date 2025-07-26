@@ -14,3 +14,8 @@ html{
   margin: 0 12px;
   box-sizing: border-box;
 }
+
+.slick-slider {
+  overflow: visible !important;
+  position: relative;
+}
